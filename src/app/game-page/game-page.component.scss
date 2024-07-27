@@ -1,0 +1,43 @@
+.game-container {
+    background-image: url(./../../assets/img/board.jpg);
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.card-stack {
+    position: relative;
+    img {
+      position: absolute;
+      width: 120px;
+      cursor: pointer;
+    }
+}
+
+.played-Card {
+    transform: scale(1.2) translateX(100px) translateY(-250px) rotate(-40deg);;
+}
+.top-card {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    &:hover{
+        transform: scale(1.2) translateY(-20px) 
+    }
+}
+
+.pick-card {
+    transition: all 225ms ease-in-out;
+    animation: pick-card-animation 1s ease-in-out;
+    transform: scale(1.2) translateX(220px) translateY(-250px) rotate(-40deg);;
+}
+
+@keyframes pick-card-animation {
+
+0% {transform: scale(1) ;}
+40% {transform: scale(1.5);}
+60% {transform: scale(1.5);}
+100% {transform: scale(1.2) translateX(220px) translateY(-250px)  rotate(-40deg);}
+}

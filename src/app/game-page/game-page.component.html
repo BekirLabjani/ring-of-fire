@@ -1,0 +1,20 @@
+<div class="game-container">
+
+ <div class="card-stack">
+    @for(item of [1,2,3,4,5]; track $index){
+        <img  src="assets/img/cards_old/card_cover.png" [ngStyle]="{'right.px': $index * 5}" alt="">
+    }
+    <img (click)="clickCard()"  class="top-card" src="assets/img/cards_old/card_cover.png" style="right: 25px;" alt="">
+
+    @for (card of game.playedCard; track $index) {
+        <img  class="played-Card" src="assets/img/cards_old/{{card}}.png" alt="">
+   }
+   
+    @if(pickCardAnimation) {
+        <img (click)="clickCard()" class="pick-card" src="assets/img/cards_old/{{currentCard}}.png" style="right: 25px;" alt="">
+    }
+
+
+ </div>
+   
+</div>

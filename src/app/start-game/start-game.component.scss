@@ -1,0 +1,28 @@
+.start-game-container{
+    background-color: rgb(61, 59, 59);
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >img {
+        height: 100vh;
+    }
+}
+.lable-box {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 100px;
+display: flex;
+justify-content: center;
+    >img {
+    width: 30vw;
+    height: auto;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}   
+}
