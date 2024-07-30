@@ -41,3 +41,22 @@
 60% {transform: scale(1.5);}
 100% {transform: scale(1.2) translateX(220px) translateY(-250px)  rotate(-40deg);}
 }
+
+.player-position {
+    position: absolute;
+    right: 0;
+}
+
+.add-player-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    
+}
+
+.information-bottom {
+    position: absolute;
+    left: 100px;
+    right: 200px;
+    bottom: 40px;
+}
