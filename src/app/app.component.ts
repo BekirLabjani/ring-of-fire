@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { StartGameComponent } from './start-game/start-game.component';
-
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,5 +12,10 @@ import { StartGameComponent } from './start-game/start-game.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ringOfFire';
+  firestore: Firestore = inject(Firestore);
+
+
+  constructor() {
+
+  }
 }

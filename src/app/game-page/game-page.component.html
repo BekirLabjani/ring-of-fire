@@ -13,13 +13,13 @@
         <img  class="played-Card" src="assets/img/cards_old/{{card}}.png" alt="">
    }
 
-    @if(pickCardAnimation) {
-        <img (click)="clickCard()" class="pick-card" src="assets/img/cards_old/{{currentCard}}.png" style="right: 25px;" alt="">
+    @if(game.pickCardAnimation) {
+        <img (click)="clickCard()" class="pick-card" src="assets/img/cards_old/{{game.currentCard}}.png" style="right: 25px;" alt="">
     }
  </div>
 
 </div>
-<app-game-information class="information-bottom" [card]="currentCard"></app-game-information>
+<app-game-information class="information-bottom" [card]="game.currentCard"></app-game-information>
 
 
 <button mat-fab aria-label="Example icon button with a delete icon" class="add-player-btn" (click)="openDialog()">
